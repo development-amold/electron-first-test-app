@@ -1,0 +1,27 @@
+{
+  "name": "electron-first-test-app",
+  "productName": "Electron desktop app",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . electron-first-test-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/monitor-test-icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron desktop app\"",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/monitor-test-icns.icns --prune=true --out=release-builds",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/monitor-test-png.png --prune=true --out=release-builds"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Amol Dumbre",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.8.6",
+    "electron-packager": "^12.0.2",
+    "electron-winstaller": "^2.6.4"
+  }
+}
